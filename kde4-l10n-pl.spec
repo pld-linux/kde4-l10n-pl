@@ -22,11 +22,13 @@ License:	GPL
 Group:		I18n
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/kde-l10n/kde-l10n-pl-%{version}.tar.bz2
 # Source0-md5:	9575587e4b0c4824d106c747d3bb0048
+BuildRequires:	automoc4
 BuildRequires:	cmake
 BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdelibs-devel
-BuildRequires:	automoc4
 #BuildRequires:	libxml2-progs >= 2.4.2
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,7 +59,7 @@ install -d build
 cd build
 %cmake \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DCMAKE_VERBOSE_MAKEFILE=1 \
+	-DCMAKE_VERBOSE_MAKEFILE=ON \
 	-DSYSCONF_INSTALL_DIR=%{_sysconfdir} \
 	..
 
