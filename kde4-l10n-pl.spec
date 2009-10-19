@@ -58,6 +58,7 @@ KDE - wsparcie dla języka polskiego.
 install -d build
 cd build
 %cmake \
+	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	-DCMAKE_VERBOSE_MAKEFILE=ON \
 	-DSYSCONF_INSTALL_DIR=%{_sysconfdir} \
