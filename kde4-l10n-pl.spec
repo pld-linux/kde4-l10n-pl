@@ -11,22 +11,25 @@
 #   /usr/share/locale/ko/LC_SCRIPTS/kdelibs4/kdelibs4.js
 #   /usr/share/locale/zh_CN/LC_SCRIPTS/kdelibs4/kdelibs4.js
 
-%define		_state		unstable
+%define		_state		stable
 
 Summary:	K Desktop Environment - international support
 Summary(pl.UTF-8):	KDE - wsparcie dla wielu języków
 Name:		kde4-l10n-pl
-Version:	4.2.96
+Version:	4.9.0
 Release:	1
 License:	GPL
 Group:		I18n
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/kde-l10n/kde-l10n-pl-%{version}.tar.bz2
-# Source0-md5:	369b2b3ff274230249698e83889069fd
+Source0: ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/kde-l10n/kde-l10n-pl-%{version}.tar.xz
+# Source0-md5:	8bfb3ef1fbd6b8c2f03f62064a6be5bb
 BuildRequires:	automoc4
 BuildRequires:	cmake
+BuildRequires:	docbook-dtd42-xml
+BuildRequires:	docbook-style-xsl
 BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdelibs-devel
 #BuildRequires:	libxml2-progs >= 2.4.2
+BuildRequires:	perl-modules
 BuildRequires:	qt4-build
 BuildRequires:	qt4-qmake
 BuildArch:	noarch
@@ -219,3 +222,6 @@ check_installed_files
 
 %files -f build/Polish.lang Polish
 %defattr(644,root,root,755)
+%{_mandir}/pl/man1/*.1*
+%{_mandir}/pl/man6/*.6*
+%{_mandir}/pl/man8/*.8*
