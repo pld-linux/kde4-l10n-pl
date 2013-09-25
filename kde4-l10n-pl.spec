@@ -16,12 +16,12 @@
 Summary:	K Desktop Environment - international support
 Summary(pl.UTF-8):	KDE - wsparcie dla wielu języków
 Name:		kde4-l10n-pl
-Version:	4.9.4
+Version:	4.10.5
 Release:	1
 License:	GPL
 Group:		I18n
 Source0: ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/kde-l10n/kde-l10n-pl-%{version}.tar.xz
-# Source0-md5:	9592ec9d2cbe940c8acf18c6f77de992
+# Source0-md5:	8de51664963125e3df0cab864ab79740
 BuildRequires:	automoc4
 BuildRequires:	cmake
 BuildRequires:	docbook-dtd42-xml
