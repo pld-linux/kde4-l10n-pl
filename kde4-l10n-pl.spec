@@ -26,7 +26,7 @@ BuildRequires:	automoc4
 BuildRequires:	cmake
 BuildRequires:	docbook-dtd42-xml
 BuildRequires:	docbook-style-xsl
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	perl-modules
 BuildRequires:	qt4-build
